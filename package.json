@@ -1,0 +1,25 @@
+{
+  "name": "cristianstan.dev",
+  "version": "1.0.0",
+  "description": "My personal Portfolio Project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "sass": "node-sass -w sass/ -o assets/css/ --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://PvDots@bitbucket.org/cristianstandev/portfolio-website.git"
+  },
+  "keywords": [
+    "Portfolio"
+  ],
+  "author": "Cristian Stan",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/cristianstandev/portfolio-website#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
