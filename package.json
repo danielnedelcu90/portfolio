@@ -20,6 +20,6 @@
   "license": "ISC",
   "homepage": "https://bitbucket.org/cristianstandev/portfolio-website#readme",
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
