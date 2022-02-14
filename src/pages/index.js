@@ -9,15 +9,15 @@ import ArticlePreview from '../components/article-preview'
 class RootIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.nodes')
-    const [author] = get(this, 'props.data.allContentfulPerson.nodes')
+    // const [author] = get(this, 'props.data.allContentfulPerson.nodes')
 
     return (
       <Layout location={this.props.location}>
-        <Hero
+        {/* <Hero
           image={author.heroImage.gatsbyImageData}
           title={author.name}
           content={author.shortBio.shortBio}
-        />
+        /> */}
         <ArticlePreview posts={posts} />
       </Layout>
     )
@@ -50,7 +50,7 @@ export const pageQuery = graphql`
       }
     }
     allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
+      filter: { contentful_id: { eq: "l5awjb27nefb" } }
     ) {
       nodes {
         name

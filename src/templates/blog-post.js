@@ -28,15 +28,14 @@ class BlogPostTemplate extends React.Component {
         />
         <div className={styles.container}>
           <span className={styles.meta}>
-            {post.author?.name} &middot;{' '}
             <time dateTime={post.rawDate}>{post.publishDate}</time> –{' '}
-            {post.body?.childMarkdownRemark?.timeToRead} minute read
+            {post.content?.childMarkdownRemark?.timeToRead} minute read
           </span>
           <div className={styles.article}>
             <div
-              className={styles.body}
+              className={styles.content}
               dangerouslySetInnerHTML={{
-                __html: post.body?.childMarkdownRemark?.html,
+                __html: post.content?.childMarkdownRemark?.html,
               }}
             />
             <Tags tags={post.tags} />
@@ -78,9 +77,6 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       slug
       title
-      author {
-        name
-      }
       publishDate(formatString: "MMMM Do, YYYY")
       rawDate: publishDate
       heroImage {
@@ -89,7 +85,7 @@ export const pageQuery = graphql`
           src
         }
       }
-      body {
+      content {
         childMarkdownRemark {
           html
           timeToRead
